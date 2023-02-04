@@ -15,41 +15,75 @@
                 <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
                 <label asp-for="Username" class="form-label"></label>
             </div>
-            <div class="form-floating mb-3">
+            <!--<div class="form-floating mb-3">
                 <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>-->
+            <p>Note: all of the fields with the exception of Photo are mandatory! Save won't be allowed otherwise.</p>
+            <div>
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
             </div>
              <div>
                 <label for="countries">Country:</label>
                 <select name="countries" id="countries">
+                    <option value="empty"></option>
                     <option value="Canada">Canada</option>
                     <option value="Namibia">Namibia</option>
                 </select>
             </div>
             <div>
-                <label for="fname">City:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city"><br><br>
             </div>
             <div>
-                <label for="languages">Language:</label>
+                <label for="lang">Language:</label>
                 <select name="lang" id="lang">
+                    <option value="empty"></option>
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
                 </select>
             </div>
             <div>
                 <label for="act">Activity:</label>
-                <select name="act" id="lang">
+                <select name="act" id="act">
+                    <option value="empty"></option>
                     <option value="en">Badminton</option>
                     <option value="es">Voleyball</option>
                 </select>
             </div>
             <div>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Available">
-                <label for="vehicle1"> Available</label><br>
+                <label for="about">About:</label>
+                <textarea id="about" rows="4" cols="50" placeholder="Minimum 40 characters, maximum 2000"></textarea>
+            </div>
+                        <div>
+               <label for="countries">Photo:</label>
+                <input type="file" name="fileName"> Note: Max 10Mb
+            </div>
+            <div>
+                <label for="availability">Available</label>
+                <input type="checkbox" id="availability" name="availability" checked><br><br>
             </div>
             <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+            <br /><br />
+            <div>
+                <label for="approval">Approved</label>
+                <select name="approval" id="approval" disabled>
+                   <option value="review">Under Review</option>
+                   <option value="yes">Yes</option>
+                   <option value="no">No</option>
+                </select>
+            </div>
+            <p>Note: disabled for the user, set by the back-end/admin; if No the content of field ApprovalReason will be shown as well</p>
+            <div>
+                <label for="membership">Member</label>
+                <select name="membership" id="membership" disabled> 
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <p>Note: disabled for the user, set by the back-end/admin</p>
         </form>
     </div>
 </div>
