@@ -1,0 +1,48 @@
+﻿@page "/search"
+
+<h3>Search</h3>
+
+    <div class="col-md-4">
+        <form id="profile-form" method="post">
+            <div>
+                <label for="countries">Country:</label>
+                <select name="countries" id="countries">
+                    <option value="empty"></option>
+                    <option value="en">Show alphabetically in the list only the countries for which there is at least one user</option>
+                </select>
+            </div>
+            <div>
+                <label for="fname">City:</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div>
+                <label for="lang">Language:</label>
+                <select name="lang" id="lang">
+                    <option value="empty"></option>
+                    <option value="en">Show alphabetically in the list only the languages for which there is at least one user</option>
+                <option value="en">If country selected list only the languages for which there is at least one user from the respective country</option>
+                </select>
+            </div>
+            <div>
+                <label for="act">Activity:</label>
+                <select name="act" id="act">
+                    <option value="en" selected>Badminton</option>
+                    <option value="es">Voleyball</option>
+                </select>
+            </div>
+        <div>
+            <label for="results">Results per page:</label>
+            <select name="results" id="results">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+            <button id="update-profile-button" type="submit" class="w-50 btn btn-lg btn-primary" disabled>Search</button>
+        </form>
+    </div>
+    <p>Note: At least one of the fields Country, City, Language has to be filled in so that Search button is enabled </p>
+
+@code {
+
+}
