@@ -41,7 +41,53 @@
             <button id="update-profile-button" type="submit" class="w-50 btn btn-lg btn-primary" disabled>Search</button>
         </form>
     </div>
+<br />
+
     <p>Note: At least one of the fields Country, City, Language has to be filled in so that Search button is enabled </p>
+    <br />
+
+<!DOCTYPE html>
+<html>
+<body>
+					<table border="0">
+						<thead>
+							<tr border="11">
+								<th width="100">Photo</th>
+								<th width="100">User</th>
+								<th width="200">Country</th>
+								<th width="200">City</th>
+								<th width="200">Language</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>thumbnail</td>
+								<td><a href="user">Joe</a></td>
+								<td>Canada</td>
+								<td>Quebec</td>
+								<td>French</td>
+							</tr>
+							<tr>
+								<td>thumbnail</td>
+								<td><a href="user">Shilpa</a></td>
+								<td>Columbia</td>
+								<td>Bogota</td>
+								<td>Spanish</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+<br />
+    <p>Note:
+        <br />If user is not logged in clicking on ther user link will display a message "please log in so you can display all user details"
+        <br />If user is registered and approved clicking on ther user link will display all user details, except username.
+        <br />If user is logged in but not approved yet clicking on ther user link will display a message "Once the profile has been approved, you will be able to see all details"
+        <br />If user is logged in and profile has been rejected clicking on ther user link will display a message "Sorry, your profile has not been approved. Please visit your profile page to see the reason."
+
+    </p>
+    </body>
+</html>
 
 @code {
 
